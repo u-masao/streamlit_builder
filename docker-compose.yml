@@ -2,3 +2,8 @@ version: "3.9"
 services:
   builder:
     build: .
+    tty: true
+    volumes:
+      - type: bind
+        source: "."
+        target: "/content"
