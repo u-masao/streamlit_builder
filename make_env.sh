@@ -20,6 +20,7 @@ git checkout $BRANCH_NAME
 npm install -g npm
 npm install -g n
 npm install -g yarn
+n latest
 
 cd lib
 pipenv --python 3.8
