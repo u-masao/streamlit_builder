@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 
-LANG=C
+export LANG=C
 GITHUB_USER_NAME=u-masao
 BRANCH_NAME=feature/add-https-support
 
@@ -17,6 +17,12 @@ git submodule update --init
 git pull origin $BRANCH_NAME 
 git checkout $BRANCH_NAME
 
+npm install -g npm
+npm install -g n
+npm install -g yarn
+
 cd lib
 pipenv --python 3.8
+
+echo "TODO: cd /work/streamlit/lib ; pipenv run 'make all-devel'"
 pipenv shell
