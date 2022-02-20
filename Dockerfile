@@ -41,6 +41,7 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends \
     graphviz \
     libgconf-2-4 \
+    libprotobuf-dev \
     npm \
     protobuf-compiler \
     python3-pip \
@@ -51,6 +52,5 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 RUN pip install pipenv
-
 
 WORKDIR /content
