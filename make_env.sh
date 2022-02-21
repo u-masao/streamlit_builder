@@ -1,12 +1,13 @@
 #!/usr/bin/bash
 
-
 export LANG=C
 GITHUB_USER_NAME=u-masao
 BRANCH_NAME=feature/add-https-support
 
-cd /
-mkdir /work
+if [ ! -d /work ] ; then
+  mkdir /work
+fi
+
 cd /work/
 git clone https://github.com/${GITHUB_USER_NAME}/streamlit.git
 
@@ -20,10 +21,10 @@ git checkout $BRANCH_NAME
 npm install -g npm
 npm install -g n
 npm install -g yarn
-n latest
+n 14.19.0
+yarn config set strict-ssl false
 
 cd lib
 pipenv --python 3.8
 
-echo "TODO: cd /work/streamlit/lib ; pipenv run 'make all-devel'"
-pipenv shell
+echo "TODO:  cd /work/streamlit/lib ; pipenv run sh -c 'make all-devel frontend'; cd frontend ; yarn start"
