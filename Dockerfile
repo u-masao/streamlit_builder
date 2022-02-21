@@ -16,6 +16,7 @@ RUN apt-get update \
     git \
     libbz2-dev \
     libffi-dev \
+    libgl1-mesa-dev \
     liblzma-dev \
     libmysqlclient-dev \
     libncurses5-dev \
@@ -27,6 +28,7 @@ RUN apt-get update \
     make \
     mysql-client \
     python-openssl \
+    rsync \
     tk-dev \
     unixodbc-dev \
     wget \
