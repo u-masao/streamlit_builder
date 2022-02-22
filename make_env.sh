@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/bash -eux
 
 export LANG=C
 GITHUB_USER_NAME=u-masao

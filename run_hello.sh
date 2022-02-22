@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/bash -eux
 
-cd /work/streamlit/lib
+export PIPENV_PIPFILE=/work/streamlit/lib/Pipfile
 pipenv run sh -c "cd .. ; streamlit hello"
