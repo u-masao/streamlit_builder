@@ -6,6 +6,9 @@ services:
     ports:
       - "127.0.0.1:3000:3000"
       - "127.0.0.1:8501:8501"
+    environment:
+      - PIPENV_PIPFILE=/work/streamlit/lib/Pipfile
+    working_dir: /content
     volumes:
       - type: bind
         source: "."
